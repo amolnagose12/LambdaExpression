@@ -14,7 +14,7 @@ public class RegexLambdaExpression {
     public static void main(String[] args){
         System.out.println(" Lambda Expression ");
         Regex regex =(input)->{
-            String pattern= "^[A-z]{3,}";
+            String pattern= "^[A-Z]{1}[a-z]{2,}";
             Pattern r= Pattern.compile(pattern);
 
             Matcher m = r.matcher(input);
@@ -25,11 +25,11 @@ public class RegexLambdaExpression {
 
             }else
             {
-                System.out.println(" First Name No Matched ");
+                System.out.println(" First Name Not Matched ");
             }
             return true;
         };
 
-        System.out.println("First Name :"+" "+regex.details("Amol"));
+        System.out.println("First Name :"+" "+regex.details("amol"));
     }
 }
