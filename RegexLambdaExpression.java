@@ -13,7 +13,7 @@ public class RegexLambdaExpression {
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         PasswordRule1 function = (password)->{
-            boolean check = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&]).{8,32}$",password);
+            boolean check = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&]).{8,}$",password);
             if (check == true) {
                 System.out.println("Password is Valid");
             }else
