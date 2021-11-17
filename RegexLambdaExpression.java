@@ -3,26 +3,22 @@ package com.bridgelabz.lambdaexpression;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-/**
- * User registration program using lambda expression.
- */
 @FunctionalInterface
-interface Lastname {
-    void validUser(String name);
+interface EmailId {
+    void validUser(String email);
 }
 
 public class RegexLambdaExpression {
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
-        Lastname function = (name)->{
-            boolean check = Pattern.matches("(^[A-Z]{1}[a-z]{2,})",name);
+        EmailId function = (email)->{
+            boolean check = Pattern.matches("^([a-z]{3}[.][a-z]{3}@[a-z]{2}[.][a-z]{2}[.][a-z]{2})$",email);
             if (check == true) {
-                System.out.println("Lastname is Valid");
+                System.out.println("Email is Valid");
             }else
-                System.out.println("Enter valid name");
-            	
+                System.out.println("Enter valid email");
         };
-        function.validUser("Nagose");
+        function.validUser("abc.xyz@bl.co.in");
     }
 }
