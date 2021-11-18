@@ -11,9 +11,8 @@ interface PasswordRule1 {
 public class RegexLambdaExpression {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to User Registration program");
         PasswordRule1 function = (password)->{
-            boolean check = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&]).{8,}$",password);
+            boolean check = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]){1,}(?=.*[*.!@$%^&]).{8,}$",password);
             if (check == true) {
                 System.out.println("Password is Valid");
             }else
